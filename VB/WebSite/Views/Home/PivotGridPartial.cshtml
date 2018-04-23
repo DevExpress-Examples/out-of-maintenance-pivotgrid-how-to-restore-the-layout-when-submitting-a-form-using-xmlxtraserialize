@@ -1,0 +1,20 @@
+﻿@Html.DevExpress().PivotGrid(
+settings => {
+    settings.Name = "PivotGrid";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "PivotGridPartial" };
+    settings.OptionsView.ShowHorizontalScrollBar = true;
+    settings.Width = new System.Web.UI.WebControls.Unit(90, System.Web.UI.WebControls.UnitType.Percentage);
+    settings.Fields.Add("[Measures].[Sales Amount]", PivotArea.DataArea);
+    settings.Fields.Add("[Product].[Product Categories].[Category]", PivotArea.RowArea);
+    settings.Fields.Add("[Date].[Calendar Year].[Calendar Year]", PivotArea.ColumnArea);
+
+    settings.PreRender = (sender, e) => {
+        DevExpress.Utils.Serializing.XmlXtraSerializer serializer = new DevExpress.Utils.Serializing.XmlXtraSerializer();
+        serializer.DeserializeObject(sender, Server.MapPath("~/App_Data/PivotGridState.xml"), "PivotGrid");
+    };
+    settings.AfterPerformCallback = (sender, e) => {
+        DevExpress.Utils.Serializing.XmlXtraSerializer serializer = new DevExpress.Utils.Serializing.XmlXtraSerializer();
+        serializer.SerializeObject(sender, Server.MapPath("~/App_Data/PivotGridState.xml"), "PivotGrid");
+    };
+
+}).BindToOLAP(PivotGridHelper.OlapConnectionString).GetHtml()
