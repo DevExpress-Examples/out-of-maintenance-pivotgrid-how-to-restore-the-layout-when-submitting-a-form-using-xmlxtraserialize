@@ -7,6 +7,9 @@
 * [PivotGridPartial.cshtml](./CS/WebSite/Views/Home/PivotGridPartial.cshtml)
 <!-- default file list end -->
 # PivotGrid - How to restore the layout when submitting a form using XmlXtraSerializer
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e4215)**
+<!-- run online end -->
 
 
 <p>The PivotGrid extension does not have the built-in capability to restore a form state when submitting the form or refreshing a page. This example illustrates how to do this manually.</p><p>To accomplish this task, execute the following steps:</p><p>- Assign a delegate to the PreRender property;<br />
