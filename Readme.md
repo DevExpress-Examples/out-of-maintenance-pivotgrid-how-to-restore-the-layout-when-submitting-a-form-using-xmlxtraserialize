@@ -8,7 +8,7 @@
 <!-- default file list end -->
 # PivotGrid - How to restore the layout when submitting a form using XmlXtraSerializer
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e4215)**
+**[[Run Online]](https://codecentral.devexpress.com/e4215/)**
 <!-- run online end -->
 
 
