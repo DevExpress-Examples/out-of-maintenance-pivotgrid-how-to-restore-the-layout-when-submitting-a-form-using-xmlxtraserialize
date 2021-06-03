@@ -19,6 +19,7 @@ The PivotGrid extension does not have the built-in capability to restore a form 
 - Assign a delegate to the [PivotGridSettings.AfterPerformCallback](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.PivotGridSettings.AfterPerformCallback) property;
 - Serialize the PivotGrid data to the XML file.
 
+
 ## More Examples 
 
 - [PivotGrid - How to save/load field values' collapsed states together with pivot grid's layout](https://github.com/DevExpress-Examples/pivotgrid-how-to-save-load-field-values-collapsed-states-together-with-pivot-grids-layout-e4219)
